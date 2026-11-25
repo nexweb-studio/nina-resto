@@ -1,0 +1,67 @@
+/* ===== ESTILOS: tema oscuro gastronómico ===== */
+:root{--bg:#0d0d0c;--card:#181816;--line:#2a2926;--tx:#f3efe8;--mut:#a39d92;--ac:#e8932c;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Inter,system-ui,sans-serif}
+h1,h2,h3,.of{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:.03em;margin:0}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:#0d0d0cee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;gap:4px;overflow-x:auto;padding:8px 12px;max-width:1100px;margin:auto}
+nav a{color:var(--mut);text-decoration:none;font:600 14px Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;border-radius:20px;white-space:nowrap}
+nav a.on{background:var(--ac);color:#111}
+nav a b{background:#fff;color:#111;border-radius:10px;padding:0 6px;margin-left:4px;font-size:12px}
+main{max-width:1100px;margin:auto;padding:20px 16px 60px}
+.view{display:none}.view.on{display:block}
+.hero{min-height:62vh;border-radius:16px;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;background:linear-gradient(180deg,#0d0d0c00 20%,#0d0d0cf2),url(../assets/images/hero.svg);background-size:cover;background-position:center}
+.hero h1{font-size:clamp(38px,9vw,76px);line-height:1}.hero h1 span{color:var(--ac)}
+.hero p{color:var(--mut);max-width:520px}
+.btn{background:var(--ac);color:#111;border:0;border-radius:10px;padding:11px 18px;font:600 15px Oswald,sans-serif;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.o{background:none;border:1px solid var(--ac);color:var(--ac)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+h2.t{font-size:clamp(30px,6vw,48px);color:var(--ac);margin:8px 0 4px}
+.sub{color:var(--mut);margin:0 0 20px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.ph{aspect-ratio:4/3;background:linear-gradient(135deg,#2b1a0c,#14110d);display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:22px}
+.card ul{margin:0;padding-left:18px;color:var(--tx)}
+.card p{margin:0;color:var(--mut);font-size:14px}
+.pr{font:700 26px Oswald,sans-serif;color:var(--ac)}.pr.c{font-size:17px;color:var(--mut);font-weight:600}
+select,input,textarea{width:100%;background:#0f0f0e;color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:9px;font:inherit}
+.cb .btn{margin-top:auto}
+.cat{margin-top:34px}.cat h2{font-size:30px;border-bottom:2px solid var(--ac);display:inline-block;margin-bottom:14px}
+.chips{display:flex;gap:8px;overflow-x:auto;margin-bottom:8px}
+.chips a{border:1px solid var(--line);color:var(--tx);padding:6px 14px;border-radius:20px;text-decoration:none;font-size:14px;white-space:nowrap}
+.ci{display:grid;grid-template-columns:1fr auto;gap:6px 12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
+.ci small{color:var(--mut);display:block}
+.q{display:flex;align-items:center;gap:8px}.q button{width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:#0f0f0e;color:var(--tx);font-size:18px;cursor:pointer}
+.tot{font:700 30px Oswald,sans-serif;display:flex;justify-content:space-between;margin:18px 0 6px}
+.note{color:var(--mut);font-size:14px}
+.loc{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.loc .card{padding:20px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:24px 16px 40px;border-top:1px solid var(--line)}
+@keyframes pan{0%,100%{background-position:35% 50%}50%{background-position:65% 50%}}
+@keyframes bump{50%{transform:scale(1.4)}}
+.hero{background-size:cover;animation:pan 18s ease-in-out infinite}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s,border-color .25s}.rv.in{opacity:1;transform:none}
+.card:hover{border-color:var(--ac)}.card.in:hover{transform:translateY(-4px)}
+.ph span{transition:transform .4s}.card:hover .ph span{transform:scale(1.25) rotate(-6deg)}
+.srch{margin:0 0 14px}
+.chips{position:sticky;top:calc(52px + env(safe-area-inset-top,0px));z-index:4;background:var(--bg);padding:6px 0}
+.chips a.on{background:var(--ac);color:#111;border-color:var(--ac)}
+#feat{max-width:420px;transition:opacity .3s}
+.cq{display:flex;align-items:center;gap:12px}.cq .cn{min-width:20px;text-align:center}
+.bump{animation:bump .4s}
+#toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:#fff;color:#111;font:600 15px Oswald,sans-serif;padding:10px 18px;border-radius:24px;opacity:0;pointer-events:none;transition:.3s;z-index:20;white-space:nowrap}#toast.on{opacity:1;transform:translate(-50%,0)}
+#bar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:600px;margin:auto;background:var(--ac);color:#111;border-radius:14px;padding:12px 18px;display:none;justify-content:space-between;font:600 18px Oswald,sans-serif;text-decoration:none;z-index:10;box-shadow:0 8px 30px #000a}#bar.on{display:flex}
+main{padding-bottom:110px}
+@media (prefers-reduced-motion:reduce){.hero{animation:none}.rv{opacity:1;transform:none}}
+.tag{display:inline-block;font:600 12px Oswald;background:var(--ac);color:#111;border-radius:6px;padding:2px 8px;width:max-content}
+
+[hidden]{display:none!important}
+.cf{display:grid;gap:10px;margin-top:10px}
+textarea{resize:vertical}
+.dlg{position:fixed;inset:0;background:#000b;z-index:50;display:flex;align-items:center;justify-content:center;padding:16px;animation:fade .25s}
+.dbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;width:100%;max-width:520px;display:grid;gap:10px;animation:pop .25s}
+@keyframes fade{from{opacity:0}}@keyframes pop{from{transform:scale(.94);opacity:0}}
+.ph img{transition:transform .5s}.card:hover .ph img{transform:scale(1.06)}

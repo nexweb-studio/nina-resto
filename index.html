@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pizzería Avellaneda · Promos y Carta</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;600&display=swap">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<meta name="description" content="Promociones y carta de pizzas, empanadas, hamburguesas y sándwiches en Avellaneda, Santa Fe.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><nav id="nav">
+<a href="#inicio" data-v="inicio">Inicio</a><a href="#promociones" data-v="promociones">Promociones</a><a href="#carta" data-v="carta">Nuestra carta</a><a href="#ubicacion" data-v="ubicacion">Ubicación</a><a href="#pedido" data-v="pedido">Mi pedido<b id="cnt">0</b></a>
+</nav></header>
+<main>
+<section class="view" id="v-inicio">
+<div class="hero"><h1>Pizzas, milas y <span>mucho sabor</span></h1><p>Promos para compartir y carta completa. Armá tu pedido online y lo preparamos en Avellaneda, Santa Fe.</p>
+<div class="row"><a class="btn" href="#promociones">Ver promociones</a><a class="btn o" href="#carta">Nuestra carta</a></div></div>
+<h2 class="t" style="margin-top:28px">Promo destacada</h2><div id="feat"></div>
+</section>
+<section class="view" id="v-promociones"><h2 class="t">Nuestras promos</h2><p class="sub">Todas incluyen papas. Los sándwiches y hamburguesas salen con mayonesa casera, opcional mayonesa natura.</p><input class="srch" id="sp" type="search" placeholder="Buscar promo (ej. pizza, lomo, tacos)…"><div class="grid" id="gp"></div></section>
+<section class="view" id="v-carta"><h2 class="t">Nuestra carta</h2><p class="sub">Platos individuales. Los precios se confirman al hacer el pedido.</p><input class="srch" id="sc" type="search" placeholder="Buscar en la carta…"><div class="chips" id="chips"></div><div id="gc"></div></section>
+<section class="view" id="v-ubicacion"><h2 class="t">Ubicación</h2><p class="sub">Venís o pedís: te esperamos.</p>
+<div class="loc"><div class="card"><h3>Dirección</h3><p style="font-size:18px;color:var(--tx)">Calle 5 N° 731<br>Avellaneda, Santa Fe</p><div class="row"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Calle+5+731+Avellaneda+Santa+Fe">Abrir en Maps</a></div></div>
+<div class="card"><h3>Pedidos</h3><p style="font-size:18px;color:var(--tx)" id="telTxt"></p><p class="note">Los sándwiches y hamburguesas salen con mayonesa casera, opcional mayonesa natura.</p><div class="row" id="telRow"></div></div>
+<div class="card" style="padding:20px"><h3>Contacto</h3><form id="cf" class="cf"><input id="cfn" required placeholder="Tu nombre" autocomplete="name"><input id="cft" type="tel" placeholder="Tu teléfono (opcional)" autocomplete="tel"><textarea id="cfm" required rows="3" placeholder="Tu consulta"></textarea><button class="btn" type="submit">Enviar consulta</button></form></div></div></section>
+<section class="view" id="v-pedido"><h2 class="t">Mi pedido</h2><div id="cart"></div></section>
+</main>
+<div id="dlg" class="dlg" hidden><div class="dbox"><h3 id="dt"></h3><p class="note" id="dp"></p><textarea id="dx" readonly rows="9"></textarea><div class="row"><button class="btn" id="dcp" type="button">Copiar</button><a class="btn o" id="dwa" hidden target="_blank" rel="noopener">Abrir WhatsApp</a><button class="btn o" id="dcl" type="button">Cerrar</button></div></div></div>
+<div id="toast"></div><a id="bar" href="#pedido"><span id="bq"></span><span id="bt"></span></a>
+<footer>© Pizzería Avellaneda · Demo comercial · Calle 5 N° 731, Avellaneda, Santa Fe</footer>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
